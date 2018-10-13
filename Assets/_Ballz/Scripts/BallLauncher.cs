@@ -74,6 +74,8 @@ public class BallLauncher : MonoBehaviour
 
     private void EndDrag()
     {
+        if ((_endDragPosition - _startDragPosition).magnitude < 0.2f ) return;
+        
         LaunchBalls();
         _launchPreview.Clear();
     }
